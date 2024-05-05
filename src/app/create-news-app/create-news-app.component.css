@@ -1,0 +1,56 @@
+.form_wrapper{
+  width: 450px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.label_input{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.label_input input{
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border: 1px solid rgb(218, 215, 215);
+}
+.label_input textarea{
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid rgb(218, 215, 215);
+  font-family: 'Poppins', sans-serif;
+}
+.createNews_btn{
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: blueviolet;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+}
+.isLoading{
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgb(204, 183, 223);
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #FFF;
+}
+@media screen and (max-width: 700px) {
+  .form_wrapper{
+    width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,1 +1,22 @@
-<p>news-list works!</p>
+<div class="wrapper">
+  <div class="btn_wrapper">
+    <button (click)="create()" class="createNews_btn">Create News</button>
+  </div>
+  <div class="display_news">
+    @for (article of newsArticles; track article) {
+    <div class="article_card">
+      <img [src]="article.attributes.imageUrl" alt="" />
+      <div class="article_details">
+        <span class="article_title">{{ article.attributes.title }}</span>
+        <span class="article_author">By {{ article.attributes.author }}</span>
+        <button class="readMore_btn" (click)="onReadMore(article.id)">
+          Read More
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+  <app-modal [isOpen]="createModalOpen" (isClose)="createModalToggle(false)">
+    <app-create-news-app (isModalClose)="closeFromCreate($event)"></app-create-news-app>
+  </app-modal>
+</div>

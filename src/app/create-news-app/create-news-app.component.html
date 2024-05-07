@@ -1,1 +1,47 @@
-<p>create-news-app works!</p>
+<form class="form_wrapper" (ngSubmit)="onSubmit()">
+  <div class="label_input">
+    <input
+      type="text"
+      name="title"
+      id="title"
+      [(ngModel)]="newArticle.title"
+      required
+      placeholder="Title"
+    />
+  </div>
+  <div class="label_input">
+    <textarea
+      name="content"
+      id="content"
+      rows="3"
+      [(ngModel)]="newArticle.content"
+      required
+      placeholder="Content"
+    ></textarea>
+  </div>
+  <div class="label_input">
+    <input
+      type="text"
+      name="author"
+      id="author"
+      [(ngModel)]="newArticle.author"
+      required
+      placeholder="Author"
+    />
+  </div>
+  <div class="label_input">
+    <input
+      type="text"
+      name="articleImage"
+      id="articleImage"
+      [(ngModel)]="newArticle.imageUrl"
+      placeholder="Image Url"
+    />
+  </div>
+
+  @if(!isLoading) {
+  <button type="submit" class="createNews_btn">Create News</button>
+  }@else {
+  <button type="submit" disabled class="isLoading">Loading...</button>
+  }
+</form>
